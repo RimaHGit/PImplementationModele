@@ -1,4 +1,3 @@
-pipreqs streamlit
-pipreqs pandas
-pipreqs numpy
-pipreqs matplotlib
+pipreqs streamlit==0.81.1
+pipreqs pandas==1.1.3
+pipreqs numpy==1.19.2
