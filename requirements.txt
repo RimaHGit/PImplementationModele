@@ -1,6 +1,4 @@
-pipreqs streamlit==0.79.0
-pipreqs pandas==1.2.3
-pipreqs numpy==1.18.5
-pipreqs matplotlib==3.3.2
-pipreqs seaborn==0.11.0
-pipreqs scikit_learn==0.24.1
+pipreqs streamlit
+pipreqs pandas
+pipreqs numpy
+pipreqs matplotlib
