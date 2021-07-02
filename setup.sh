@@ -1,8 +1,8 @@
-mkdir -p ~/.streamlit/
+amkdir -p ~/.streamlit/
 
 echo "\
 [general]\n\
-email = \"your-email@domain.com\"\n\
+email = \"bendjam2002@gmail.com\"\n\
 " > ~/.streamlit/credentials.toml
 
 echo "\
