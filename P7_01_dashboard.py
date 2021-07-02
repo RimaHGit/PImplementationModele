@@ -11,6 +11,8 @@ import matplotlib.pyplot as plt
 import pickle
 from sklearn import datasets
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
+
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -20,11 +22,13 @@ This app predicts the **Bank customer Prediction**!
 """)
 st.write('---')
 
-pkl_filename = "pickle_bestmodel_bank.pkl"
-scaler_filename = "pickle_scaler_bank.pkl"
-imputer_filename = "pickle_imputer_bank.pkl"
+#pkl_filename = "pickle_bestmodel_bank.pkl"
+#scaler_filename = "pickle_scaler_bank.pkl"
+#imputer_filename = "pickle_imputer_bank.pkl"
 
-pickle_model = pickle.load(open(pkl_filename, 'rb'))
+#pickle_model = pickle.load(open(pkl_filename, 'rb'))
+
+pickle_model  = RandomForestClassifier(n_estimators = 200, max_depth = 15, bootstrap = True, min_samples_leaf = 4, min_samples_split = 10)
 
 
 trainX = pd.read_csv('trainX.csv')
@@ -32,6 +36,7 @@ testX = pd.read_csv('testX.csv')
 trainy = pd.read_csv('trainy.csv')
 testy = pd.read_csv('testy.csv')
 
+pickle_model.fit(trainX, trainy)
 
 with st.sidebar.header('1. Upload your CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
