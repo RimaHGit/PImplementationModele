@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 import streamlit as st
 
 st.title("Visualizing Central Limit Theorem")
@@ -48,18 +47,6 @@ def generate_samples():
 
           
 sample_means = generate_samples()
-
-fig = plt.figure()
-plt.hist(sample_means,density=True)
-plt.axis("off")
-plt.title("Sampling distribution of sample means")
-st.pyplot(fig)
-
-fig1 = plt.figure()
-plt.hist(population,density=True)
-plt.axis("off")
-plt.title("Population distribution")
-st.pyplot(fig1)
 
 st.sidebar.write(f'(Mean, std of sample means): ({np.round(np.mean(sample_means), 2)}, {np.round(np.std(sample_means), 2)})')
 st.sidebar.write(f'pop std / sqrt(n): {np.round(np.std(population) / np.sqrt(sample_size), 2)}')
