@@ -37,7 +37,13 @@ testX = pd.read_csv('testX.csv')
 trainy = pd.read_csv('trainy.csv')
 testy = pd.read_csv('testy.csv')
 
-pickle_model.fit(trainX, trainy)
+#pickle_model.fit(trainX, trainy)
+
+@st.cache(suppress_st_warning=True)
+def fitModel():
+    pickle_model.fit(trainX, trainy)
+    
+fitModel()
 
 with st.sidebar.header('1. Upload your CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
