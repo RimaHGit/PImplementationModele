@@ -111,7 +111,7 @@ def max(x):
 
 
 def user_input_features():
-    EXT_SOURCE_3 = st.sidebar.slider('EXT_SOURCE_3', X.EXT_SOURCE_3.min(), X.EXT_SOURCE_3.max(), X.EXT_SOURCE_3.mean())
+    EXT_SOURCE_3 = st.sidebar.slider('EXT_SOURCE_3', float(X.EXT_SOURCE_3.min()), float(X.EXT_SOURCE_3.max()), float(X.EXT_SOURCE_3.mean()))
     EXT_SOURCE_2 = st.sidebar.slider('EXT_SOURCE_2', X.EXT_SOURCE_2.min(), X.EXT_SOURCE_2.max(), X.EXT_SOURCE_2.mean())
     DAYS_EMPLOYED = st.sidebar.slider('DAYS_EMPLOYED', X.DAYS_EMPLOYED.min(), X.DAYS_EMPLOYED.max(), X.DAYS_EMPLOYED.mean())
     AMT_REQ_CREDIT_BUREAU_YEAR = st.sidebar.slider('AMT_REQ_CREDIT_BUREAU_YEAR', X.AMT_REQ_CREDIT_BUREAU_YEAR.min(), X.AMT_REQ_CREDIT_BUREAU_YEAR.max(), X.AMT_REQ_CREDIT_BUREAU_YEAR.mean())
