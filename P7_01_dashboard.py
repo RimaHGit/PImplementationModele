@@ -8,8 +8,8 @@
 
 import streamlit as st
 import pandas as pd
-#import shap
-#import matplotlib.pyplot as plt
+import shap
+import matplotlib.pyplot as plt
 #import pickle
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
@@ -171,11 +171,11 @@ st.write(app_train2.describe(include = 'all'))
 st.write("--------------------------------------------------------------------------------------")
 # Explaining the model's predictions using SHAP values
 # https://github.com/slundberg/shap
-#explainer = shap.TreeExplainer(pickle_model)
-#shap_values = explainer.shap_values(df)
+explainer = shap.TreeExplainer(pickle_model)
+shap_values = explainer.shap_values(df)
 
-#st.header('Feature Importance')
-#plt.title('Feature importance based on SHAP values')
-#shap.summary_plot(shap_values, df)
-#st.pyplot(bbox_inches='tight')
-#st.write('---')
+st.header('Feature Importance')
+plt.title('Feature importance based on SHAP values')
+shap.summary_plot(shap_values, df)
+st.pyplot(bbox_inches='tight')
+st.write('---')
