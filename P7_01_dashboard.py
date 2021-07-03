@@ -17,10 +17,6 @@ from sklearn.ensemble import RandomForestClassifier
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-
-
-
-@st.cache(suppress_st_warning=True)
 def user_input_features():
     EXT_SOURCE_3 = st.sidebar.slider('EXT_SOURCE_3', 0.03, 0.83, 0.40)
     EXT_SOURCE_2 = st.sidebar.slider('EXT_SOURCE_2', 0.03, 0.83, 0.40)
