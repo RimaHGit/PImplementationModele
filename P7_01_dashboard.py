@@ -126,7 +126,7 @@ def user_input_features():
     AMT_INCOME_TOTAL = st.sidebar.slider('AMT_INCOME_TOTAL', 45000.00, 990000.00, float(500000.00))
     HOUR_APPR_PROCESS_START = st.sidebar.slider('HOUR_APPR_PROCESS_START', 4.00, 20.00, float(12.00))
     AMT_GOODS_PRICE = st.sidebar.slider('AMT_GOODS_PRICE', 67500.00, 1800000.00, float(900000.00))
-    DAYS_BIRTH = st.sidebar.slider('DAYS_BIRTH', 7712.00, 25010.00, float(15000))
+    DAYS_BIRTH = st.sidebar.slider('DAYS_BIRTH', 7712.00, 25010.00, float(15000.00))
     DAYS_ID_PUBLISH = st.sidebar.slider('DAYS_ID_PUBLISH', -6021.00, -20.00, float(-3000.00))
     AMT_CREDIT = st.sidebar.slider('AMT_CREDIT', 67500.00, 2013840.00, float(1000000.00))
     SK_ID_CURR = st.sidebar.slider('SK_ID_CURR', 103679.00, 448119.00, float(250000.00))
