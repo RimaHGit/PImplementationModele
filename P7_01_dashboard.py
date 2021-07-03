@@ -118,7 +118,7 @@ def user_input_features():
     OWN_CAR_AGE = st.sidebar.slider('OWN_CAR_AGE', float(X.OWN_CAR_AGE.min()), float(X.OWN_CAR_AGE.max()), float(X.OWN_CAR_AGE.mean()))
     OBS_60_CNT_SOCIAL_CIRCLE = st.sidebar.slider('OBS_60_CNT_SOCIAL_CIRCLE', float(X.OBS_60_CNT_SOCIAL_CIRCLE.min()), float(X.OBS_60_CNT_SOCIAL_CIRCLE.max()), float(X.OBS_60_CNT_SOCIAL_CIRCLE.mean()))
     OBS_30_CNT_SOCIAL_CIRCLE = st.sidebar.slider('OBS_30_CNT_SOCIAL_CIRCLE', float(X.OBS_30_CNT_SOCIAL_CIRCLE.min()), float(X.OBS_30_CNT_SOCIAL_CIRCLE.max()), float(X.OBS_30_CNT_SOCIAL_CIRCLE.mean()))
-    AMT_ANNUITY = st.sidebar.slider('AMT_ANNUITY', float(X.AMT_ANNUITY.min(), float(X.AMT_ANNUITY.max(), float(X.AMT_ANNUITY.mean())
+    AMT_ANNUITY = st.sidebar.slider('AMT_ANNUITY', float(X.AMT_ANNUITY.min()), float(X.AMT_ANNUITY.max()), float(X.AMT_ANNUITY.mean()))
     DAYS_REGISTRATION = st.sidebar.slider('DAYS_REGISTRATION', float(X.DAYS_REGISTRATION.min()), float(X.DAYS_REGISTRATION.max()), float(X.DAYS_REGISTRATION.mean()))
     DAYS_LAST_PHONE_CHANGE = st.sidebar.slider('DAYS_LAST_PHONE_CHANGE', float(X.DAYS_LAST_PHONE_CHANGE.min()), float(X.DAYS_LAST_PHONE_CHANGE.max()), float(X.DAYS_LAST_PHONE_CHANGE.mean()))
     EXT_SOURCE_1 = st.sidebar.slider('EXT_SOURCE_1',float(X.EXT_SOURCE_1.min()), float(X.EXT_SOURCE_1.max()), float(X.EXT_SOURCE_1.mean()))
