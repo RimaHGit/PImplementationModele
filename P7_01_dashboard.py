@@ -47,17 +47,17 @@ def user_input_features():
             'AMT_ANNUITY': AMT_ANNUITY,
             'DAYS_REGISTRATION': DAYS_REGISTRATION,
             'DAYS_LAST_PHONE_CHANGE': DAYS_LAST_PHONE_CHANGE,
-            'AMT_CREDIT': AMT_CREDIT,
-            'SK_ID_CURR': SK_ID_CURR,
+            'AMT_CREDIT': 1000000.00,
+            'SK_ID_CURR': 999999999,
             'EXT_SOURCE_1': EXT_SOURCE_1,
-            'AMT_GOODS_PRICE': AMT_GOODS_PRICE,
-            'REGION_POPULATION_RELATIVE': REGION_POPULATION_RELATIVE,
-            'AMT_INCOME_TOTAL': AMT_INCOME_TOTAL,
-            'HOUR_APPR_PROCESS_START': HOUR_APPR_PROCESS_START,
+            'AMT_GOODS_PRICE': 900000.00,
+            'REGION_POPULATION_RELATIVE': 0.04,
+            'AMT_INCOME_TOTAL': 500000.00,
+            'HOUR_APPR_PROCESS_START': 12.00,
             'AMT_REQ_CREDIT_BUREAU_YEAR': AMT_REQ_CREDIT_BUREAU_YEAR,
-            'OWN_CAR_AGE': OWN_CAR_AGE,
-            'OBS_60_CNT_SOCIAL_CIRCLE': OBS_60_CNT_SOCIAL_CIRCLE,
-            'OBS_30_CNT_SOCIAL_CIRCLE': OBS_30_CNT_SOCIAL_CIRCLE
+            'OWN_CAR_AGE': 15.00,
+            'OBS_60_CNT_SOCIAL_CIRCLE': 5.00,
+            'OBS_30_CNT_SOCIAL_CIRCLE': 5.00
             }
     features = pd.DataFrame(data, index=[0])
     return features
