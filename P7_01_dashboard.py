@@ -122,7 +122,7 @@ def user_input_features():
     DAYS_REGISTRATION = st.sidebar.slider('DAYS_REGISTRATION', float(X.DAYS_REGISTRATION.min()), float(X.DAYS_REGISTRATION.max()), float(X.DAYS_REGISTRATION.mean()))
     DAYS_LAST_PHONE_CHANGE = st.sidebar.slider('DAYS_LAST_PHONE_CHANGE', float(X.DAYS_LAST_PHONE_CHANGE.min()), float(X.DAYS_LAST_PHONE_CHANGE.max()), float(X.DAYS_LAST_PHONE_CHANGE.mean()))
     EXT_SOURCE_1 = st.sidebar.slider('EXT_SOURCE_1',float(X.EXT_SOURCE_1.min()), float(X.EXT_SOURCE_1.max()), float(X.EXT_SOURCE_1.mean()))
-REGION_POPULATION_RELATIVE = st.sidebar.slider('REGION_POPULATION_RELATIVE', float(X.REGION_POPULATION_RELATIVE.min()), float(X.REGION_POPULATION_RELATIVE.max()), float(X.REGION_POPULATION_RELATIVE.mean()))
+    REGION_POPULATION_RELATIVE = st.sidebar.slider('REGION_POPULATION_RELATIVE', float(X.REGION_POPULATION_RELATIVE.min()), float(X.REGION_POPULATION_RELATIVE.max()), float(X.REGION_POPULATION_RELATIVE.mean()))
     AMT_INCOME_TOTAL = st.sidebar.slider('AMT_INCOME_TOTAL', float(45000), float(990000), float(500000))
     HOUR_APPR_PROCESS_START = st.sidebar.slider('HOUR_APPR_PROCESS_START', float(4), float(20), float(12))
     AMT_GOODS_PRICE = st.sidebar.slider('AMT_GOODS_PRICE', float(67500), float(1800000), float(900000))
