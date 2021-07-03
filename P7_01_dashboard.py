@@ -17,6 +17,8 @@ from sklearn.ensemble import RandomForestClassifier
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
+
+@st.cache()
 def user_input_features():
     EXT_SOURCE_3 = st.sidebar.slider('EXT_SOURCE_3', 0.03, 0.83, 0.40)
     EXT_SOURCE_2 = st.sidebar.slider('EXT_SOURCE_2', 0.03, 0.83, 0.40)
@@ -76,16 +78,23 @@ st.write('---')
 
 #pickle_model = pickle.load(open(pkl_filename, 'rb'))
 
-pickle_model  = RandomForestClassifier(n_estimators = 200, max_depth = 15, bootstrap = True, min_samples_leaf = 4, min_samples_split = 10)
+picke_model  =0
+trainX = 0
+testX = 0
+trainy = 0
+testy = 0
 
+@st.cache(allow_output_mutation=True)
+def train_model():
+ pickle_model  = RandomForestClassifier(n_estimators = 200, max_depth = 15, bootstrap = True, min_samples_leaf = 4, min_samples_split = 10)
+ trainX = pd.read_csv('trainX.csv')
+ testX = pd.read_csv('testX.csv')
+ trainy = pd.read_csv('trainy.csv')
+ testy = pd.read_csv('testy.csv')
+ pickle_model.fit(trainX, trainy)
 
-trainX = pd.read_csv('trainX.csv')
-testX = pd.read_csv('testX.csv')
-trainy = pd.read_csv('trainy.csv')
-testy = pd.read_csv('testy.csv')
-
-pickle_model.fit(trainX, trainy)
-
+train_model()
+    
 #@st.cache(suppress_st_warning=True)
 #def fitModel():
 #    pickle_model.fit(trainX, trainy)
