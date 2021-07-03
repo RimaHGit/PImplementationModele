@@ -77,20 +77,11 @@ st.write('---')
 
 #pickle_model = pickle.load(open(pkl_filename, 'rb'))
 pickle_model  = RandomForestClassifier(n_estimators = 200, max_depth = 15, bootstrap = True, min_samples_leaf = 4, min_samples_split = 10)
-trainX = 0
-testX = 0
-trainy = 0
-testy = 0
-
-@st.cache(allow_output_mutation=True)
-def train_model():
- trainX = pd.read_csv('trainX.csv')
- testX = pd.read_csv('testX.csv')
- trainy = pd.read_csv('trainy.csv')
- testy = pd.read_csv('testy.csv')
- pickle_model.fit(trainX, trainy)
-
-train_model()
+trainX = pd.read_csv('trainX.csv')
+testX = pd.read_csv('testX.csv')
+trainy = pd.read_csv('trainy.csv')
+testy = pd.read_csv('testy.csv')
+pickle_model.fit(trainX, trainy)
     
 #@st.cache(suppress_st_warning=True)
 #def fitModel():
@@ -139,7 +130,7 @@ X = pd.DataFrame(app_train, columns=app_train.columns)
 Y = pd.DataFrame(app_train, columns=["TARGET"])
 
 
-@st.cache(allow_output_mutation=True)
+@st.cache()
 def computeGeneralData(pickle_model, app_train):
  # Make predictions on the test data
  predictions = pickle_model.predict_proba(testX)[:, 1]
