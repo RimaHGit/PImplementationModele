@@ -114,7 +114,7 @@ def user_input_features():
     EXT_SOURCE_3 = st.sidebar.slider('EXT_SOURCE_3', float(X.EXT_SOURCE_3.min()), float(X.EXT_SOURCE_3.max()), float(X.EXT_SOURCE_3.mean()))
     EXT_SOURCE_2 = st.sidebar.slider('EXT_SOURCE_2', float(X.EXT_SOURCE_2.min()), float(X.EXT_SOURCE_2.max()), float(X.EXT_SOURCE_2.mean()))
     DAYS_EMPLOYED = st.sidebar.slider('DAYS_EMPLOYED', float(X.DAYS_EMPLOYED.min()), float(X.DAYS_EMPLOYED.max()), float(X.DAYS_EMPLOYED.mean()))
-    AMT_REQ_CREDIT_BUREAU_YEAR = st.sidebar.slider('AMT_REQ_CREDIT_BUREAU_YEAR', float(X.AMT_REQ_CREDIT_BUREAU_YEAR.min(), float(X.AMT_REQ_CREDIT_BUREAU_YEAR.max(), float(X.AMT_REQ_CREDIT_BUREAU_YEAR.mean())
+    AMT_REQ_CREDIT_BUREAU_YEAR = st.sidebar.slider('AMT_REQ_CREDIT_BUREAU_YEAR', float(X.AMT_REQ_CREDIT_BUREAU_YEAR.min()), float(X.AMT_REQ_CREDIT_BUREAU_YEAR.max()), float(X.AMT_REQ_CREDIT_BUREAU_YEAR.mean()))
     OWN_CAR_AGE = st.sidebar.slider('OWN_CAR_AGE', float(X.OWN_CAR_AGE.min()), float(X.OWN_CAR_AGE.max()), float(X.OWN_CAR_AGE.mean()))
     OBS_60_CNT_SOCIAL_CIRCLE = st.sidebar.slider('OBS_60_CNT_SOCIAL_CIRCLE', float(X.OBS_60_CNT_SOCIAL_CIRCLE.min()), float(X.OBS_60_CNT_SOCIAL_CIRCLE.max()), float(X.OBS_60_CNT_SOCIAL_CIRCLE.mean()))
     OBS_30_CNT_SOCIAL_CIRCLE = st.sidebar.slider('OBS_30_CNT_SOCIAL_CIRCLE', float(X.OBS_30_CNT_SOCIAL_CIRCLE.min()), float(X.OBS_30_CNT_SOCIAL_CIRCLE.max()), float(X.OBS_30_CNT_SOCIAL_CIRCLE.mean()))
