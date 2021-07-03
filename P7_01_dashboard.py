@@ -9,7 +9,7 @@
 import streamlit as st
 import pandas as pd
 #import shap
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 #import pickle
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
@@ -95,6 +95,7 @@ computeGeneralData(pickle_model,app_train)
 
 st.write("--------------------------------------------------------------------------------------")
 
+@st.cache(suppress_st_warning=True)
 def user_input_features():
     EXT_SOURCE_3 = st.sidebar.slider('EXT_SOURCE_3', 0.03, 0.83, 0.40)
     EXT_SOURCE_2 = st.sidebar.slider('EXT_SOURCE_2', 0.03, 0.83, 0.40)
