@@ -119,18 +119,24 @@ if uploaded_file is not None:
      st.write('Prêt refusé')
     st.write("--------------------------------------------------------------------------------------")
 
+    
+@st.cache
+def load_data():
+    return pd.read_csv("./df_selected_features_100.csv", sep = ",")
+
+    
 # Sidebar
 # Header of Specify Input Parameters
 st.sidebar.header('2. Upload your Input Parameters')
 st.write('**--- Globalité des données de la bank ---**')
 st.write('Training Head: ')
-app_train = pd.read_csv("./df_selected_features_100.csv", sep = ",")
+app_train = load_data()
 st.write(app_train.head())
 X = pd.DataFrame(app_train, columns=app_train.columns)
 Y = pd.DataFrame(app_train, columns=["TARGET"])
 
 
-@st.cache()
+@st.cache(suppress_st_warning=True)
 def computeGeneralData(pickle_model, app_train):
  # Make predictions on the test data
  predictions = pickle_model.predict_proba(testX)[:, 1]
